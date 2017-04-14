@@ -13,6 +13,7 @@ namespace Lab6
             do
             {
                 //input from user, convert to array of words
+                Console.WriteLine("Please enter a word, or sentence:");
                 string[] sentence = ToStringArray(Console.ReadLine().ToLower());
 
                 string translation = PLTranslator(sentence);
@@ -36,7 +37,7 @@ namespace Lab6
 
             foreach (string item in input)
             {
-              
+
                 if (CheckFirstLetter(item))
                 {
                     string result = item + "way";
@@ -53,11 +54,11 @@ namespace Lab6
                     while (!CheckFirstLetter(result2))
                     {
                         result2 = result2.Substring(1) + result2.Remove(1);
-                    } 
+                    }
 
                     PigLatin = PigLatin + " " + result2 + "ay";
                 }
-                
+
             }
 
             return PigLatin;
@@ -97,7 +98,6 @@ namespace Lab6
                 Continue();
                 return true;
             }
-
 
         }
     }
