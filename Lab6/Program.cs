@@ -24,12 +24,14 @@ namespace Lab6
 
         }
 
+        //converts input sentence to an array of strings
         public static string[] ToStringArray(string input)
         {
             string[] words = input.Split(' ');
             return words;
         }
 
+        //loops through string array and translates each word
         public static string PLTranslator(string[] input)
         {
             string PigLatin = "";
@@ -64,6 +66,7 @@ namespace Lab6
             return PigLatin;
         }
 
+        //checks first letter for vowel/consonant
         public static bool CheckFirstLetter(string input)
         {
             char[] word = input.ToCharArray();
