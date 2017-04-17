@@ -1,4 +1,7 @@
-﻿using System;
+﻿//author: Charlie Lambrecht
+//date: 04/17/17
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,21 +17,17 @@ namespace Lab6
             {
                 //input from user, convert to array of words
                 Console.WriteLine("Please enter a word, or sentence:");
-                string[] sentence = ToStringArray(Console.ReadLine().ToLower().Trim());
+                string[] sentence = Console.ReadLine().ToLower().Trim().Split(' ');
 
+                //translation of string array
                 string translation = PLTranslator(sentence);
 
+                //output
                 Console.WriteLine(translation.Trim());
 
+            //prompt user to continue
             } while (Continue());
 
-        }
-
-        //converts input sentence to an array of strings
-        public static string[] ToStringArray(string input)
-        {
-            string[] words = input.Split(' ');
-            return words;
         }
 
         //loops through string array and translates each word
