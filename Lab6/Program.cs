@@ -14,7 +14,7 @@ namespace Lab6
             {
                 //input from user, convert to array of words
                 Console.WriteLine("Please enter a word, or sentence:");
-                string[] sentence = ToStringArray(Console.ReadLine().ToLower());
+                string[] sentence = ToStringArray(Console.ReadLine().ToLower().Trim());
 
                 string translation = PLTranslator(sentence);
 
